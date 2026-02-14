@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 — Страница не найдена | HealthLog</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        :root {
+            --primary: #7B68EE;
+            --background: #E6E6FA;
+            --accent: #FFB6C1;
+            --text-dark: #333333;
+            --text-light: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--primary) 0%, #9b87f5 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .error-container {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 24px;
+            padding: 3rem;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .error-number {
+            font-size: 8rem;
+            font-weight: bold;
+            color: var(--primary);
+            line-height: 1;
+            margin-bottom: 1rem;
+            text-shadow: 3px 3px 0 var(--accent);
+        }
+
+        .error-title {
+            font-size: 2rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .error-text {
+            color: #666;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .heartbeat {
+            animation: heartbeat 1.5s ease-in-out infinite;
+            color: var(--accent);
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            25% { transform: scale(1.1); }
+            35% { transform: scale(1); }
+            45% { transform: scale(1.05); }
+            55% { transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+<div class="error-container">
+    <div class="heartbeat">
+        <i class="fas fa-heartbeat fa-4x"></i>
+    </div>
+
+    <div class="error-number">404</div>
+
+    <h1 class="error-title">Ой! Страница не найдена</h1>
+
+    <p class="error-text">
+        Возможно, эта страница была удалена, перемещена или никогда не существовала.<br>
+        Но ваше здоровье всегда с вами!
+    </p>
+
+    <div class="buttons is-centered mb-5">
+        <a href="index1.html" class="button is-large" style="background-color: var(--primary); color: white;">
+            <span class="icon"><i class="fas fa-home"></i></span>
+            <span>На главную</span>
+        </a>
+        <a href="contacts.html" class="button is-large" style="background-color: var(--accent); color: var(--text-dark);">
+            <span class="icon"><i class="fas fa-envelope"></i></span>
+            <span>Связаться с нами</span>
+        </a>
+    </div>
+
+    <nav class="mt-4">
+        <a href="index1.html" class="mx-2" style="color: var(--primary);">Главная</a> |
+        <a href="faq.html" class="mx-2" style="color: var(--primary);">FAQ</a> |
+        <a href="contacts.html" class="mx-2" style="color: var(--primary);">Контакты</a> |
+        <a href="index1.html#features" class="mx-2" style="color: var(--primary);">Возможности</a>
+    </nav>
+
+    <p class="mt-5" style="color: #999; font-size: 0.9rem;">
+        <i class="fas fa-smile-wink"></i> Но если вы искали способ стать здоровее — вы его уже нашли!
+    </p>
+</div>
+</body>
+</html>

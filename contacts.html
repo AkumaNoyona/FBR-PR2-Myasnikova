@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты — HealthLog | Дневник здоровья</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        :root {
+            --primary: #7B68EE;
+            --background: #E6E6FA;
+            --accent: #FFB6C1;
+            --text-dark: #333333;
+            --text-light: #FFFFFF;
+            --title-color: #4A4A4A;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--background);
+            color: var(--text-dark);
+        }
+
+        .navbar {
+            background-color: var(--primary) !important;
+        }
+
+        .navbar-item,
+        .navbar-link {
+            color: var(--text-light) !important;
+        }
+
+        .navbar-item:hover,
+        .navbar-link:hover {
+            background-color: rgba(255, 255, 255, 0.1) !important;
+        }
+
+        .hero-block {
+            background: linear-gradient(135deg, var(--primary) 0%, #9b87f5 100%);
+            color: var(--text-light);
+            text-align: center;
+            padding: 5rem 1rem;
+        }
+
+        .section-block {
+            padding: 4rem 1.5rem;
+            background-color: var(--background);
+        }
+
+        .footer-custom {
+            background-color: var(--primary);
+            color: var(--text-light);
+            padding: 2rem 1.5rem;
+        }
+
+        .contact-map {
+            background: linear-gradient(135deg, var(--primary) 20%, var(--accent) 100%);
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            color: var(--text-light);
+            font-weight: bold;
+        }
+
+        /* ВСЕ тексты на светлом фоне - тёмные */
+        .section-block,
+        .section-block p,
+        .section-block .content,
+        .section-block .title,
+        .section-block .subtitle,
+        .section-block .label,
+        .section-block .box,
+        .section-block .media-content p {
+            color: var(--text-dark) !important;
+        }
+
+        .title-primary {
+            color: var(--title-color) !important;
+        }
+
+        /* Исправляем цвета в box с контактами */
+        .contact-info-box {
+            background-color: #f5f5ff;
+            padding: 2rem;
+            border-radius: 12px;
+        }
+
+        .contact-info-box .title,
+        .contact-info-box .subtitle,
+        .contact-info-box p {
+            color: var(--text-dark) !important;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Навигация -->
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="index1.html">
+                <i class="fas fa-heartbeat"></i>&nbsp;
+                <strong>HealthLog</strong>
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarMenu" class="navbar-menu">
+            <div class="navbar-end">
+                <a class="navbar-item" href="index1.html">Главная</a>
+                <a class="navbar-item" href="index1.html#about">О продукте</a>
+                <a class="navbar-item" href="index1.html#features">Возможности</a>
+                <a class="navbar-item" href="contacts.html">Контакты</a>
+                <a class="navbar-item" href="faq.html">FAQ</a>
+                <div class="navbar-item">
+                    <div class="buttons">
+                        <a class="button" href="#download" style="background-color: var(--accent); color: var(--text-dark); font-weight: bold;">
+                            <strong>Скачать</strong>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Заголовок страницы Контакты -->
+<section class="hero-block" style="min-height: auto; padding: 3rem 1rem;">
+    <div class="container">
+        <h1 class="title is-1 has-text-white mb-4">
+            Свяжитесь с нами
+        </h1>
+        <h2 class="subtitle is-3 has-text-white">
+            Мы всегда рады вашим вопросам и предложениям
+        </h2>
+    </div>
+</section>
+
+<!-- Контакты и форма обратной связи -->
+<section class="section-block">
+    <div class="container">
+        <div class="columns">
+            <!-- Левая колонка: контактная информация -->
+            <div class="column is-5">
+                <div class="content">
+                    <h2 class="title is-3 title-primary">Наши контакты</h2>
+
+                    <div class="contact-info-box">
+                        <div class="media mb-5">
+                            <div class="media-left">
+                                <span class="icon is-large">
+                                    <i class="fas fa-map-marker-alt fa-2x" style="color: var(--primary);"></i>
+                                </span>
+                            </div>
+                            <div class="media-content">
+                                <p class="title is-5">Адрес</p>
+                                <p class="subtitle is-6">Москва, ул. Здоровая, д. 1, офис 101</p>
+                            </div>
+                        </div>
+
+                        <div class="media mb-5">
+                            <div class="media-left">
+                                <span class="icon is-large">
+                                    <i class="fas fa-phone-alt fa-2x" style="color: var(--primary);"></i>
+                                </span>
+                            </div>
+                            <div class="media-content">
+                                <p class="title is-5">Телефон</p>
+                                <p class="subtitle is-6">+7 (123) 456-78-90</p>
+                                <p class="subtitle is-6">+7 (987) 654-32-10</p>
+                            </div>
+                        </div>
+
+                        <div class="media mb-5">
+                            <div class="media-left">
+                                <span class="icon is-large">
+                                    <i class="fas fa-envelope fa-2x" style="color: var(--primary);"></i>
+                                </span>
+                            </div>
+                            <div class="media-content">
+                                <p class="title is-5">Email</p>
+                                <p class="subtitle is-6">info@healthlog.com</p>
+                                <p class="subtitle is-6">support@healthlog.com</p>
+                            </div>
+                        </div>
+
+                        <div class="media">
+                            <div class="media-left">
+                                <span class="icon is-large">
+                                    <i class="fas fa-clock fa-2x" style="color: var(--primary);"></i>
+                                </span>
+                            </div>
+                            <div class="media-content">
+                                <p class="title is-5">Часы работы</p>
+                                <p class="subtitle is-6">Пн-Пт: 9:00 - 20:00</p>
+                                <p class="subtitle is-6">Сб-Вс: 10:00 - 16:00</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="buttons mt-5">
+                        <a class="button is-medium" href="#" style="background-color: #0088cc; color: white;">
+                            <span class="icon"><i class="fab fa-telegram"></i></span>
+                            <span>Telegram</span>
+                        </a>
+                        <a class="button is-medium" href="#" style="background-color: #4C75A3; color: white;">
+                            <span class="icon"><i class="fab fa-vk"></i></span>
+                            <span>ВКонтакте</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Правая колонка: форма обратной связи -->
+            <div class="column is-7">
+                <div class="box" style="padding: 2rem;">
+                    <h2 class="title is-3 title-primary mb-5">Напишите нам</h2>
+
+                    <form id="feedbackForm" onsubmit="return handleSubmit(event)">
+                        <!-- Имя -->
+                        <div class="field">
+                            <label class="label" style="color: var(--text-dark);">Ваше имя</label>
+                            <div class="control has-icons-left">
+                                <input class="input" type="text" placeholder="Иван Иванов" required>
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-user"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="field">
+                            <label class="label" style="color: var(--text-dark);">Email</label>
+                            <div class="control has-icons-left">
+                                <input class="input" type="email" placeholder="ivan@example.com" required>
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-envelope"></i>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Тема (выпадающий список) -->
+                        <div class="field">
+                            <label class="label" style="color: var(--text-dark);">Тема обращения</label>
+                            <div class="control">
+                                <div class="select is-fullwidth">
+                                    <select required>
+                                        <option value="" disabled selected>Выберите тему</option>
+                                        <option>Вопрос о продукте</option>
+                                        <option>Предложение по улучшению</option>
+                                        <option>Сообщить о проблеме</option>
+                                        <option>Сотрудничество</option>
+                                        <option>Другое</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Сообщение -->
+                        <div class="field">
+                            <label class="label" style="color: var(--text-dark);">Сообщение</label>
+                            <div class="control">
+                                <textarea class="textarea" placeholder="Ваше сообщение..." rows="5" required></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Чекбокс согласия -->
+                        <div class="field">
+                            <div class="control">
+                                <label class="checkbox" style="color: var(--text-dark);">
+                                    <input type="checkbox" required>
+                                    Я соглашаюсь на <a href="#" style="color: var(--primary);">обработку персональных данных</a>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Кнопка отправки -->
+                        <div class="field">
+                            <div class="control">
+                                <button class="button is-primary" type="submit" style="background-color: var(--primary); color: white;">
+                                    <span class="icon"><i class="fas fa-paper-plane"></i></span>
+                                    <span>Отправить сообщение</span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- Уведомление об успешной отправке -->
+                    <div id="successMessage" class="notification is-success mt-5" style="display: none;">
+                        <button class="delete" onclick="this.parentElement.style.display='none'"></button>
+                        <strong>Спасибо!</strong> Ваше сообщение отправлено. Мы ответим вам в ближайшее время.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Карта -->
+        <div class="box mt-6" style="padding: 1rem;">
+            <h3 class="title is-4 title-primary mb-3">Как нас найти</h3>
+            <div class="contact-map" style="height: 300px;">
+                <div class="has-text-centered">
+                    <i class="fas fa-map-marked-alt fa-3x mb-3"></i>
+                    <p>Здесь будет карта (Яндекс.Карты или Google Maps)</p>
+                    <p><small>Для настоящей карты нужно вставить iframe</small></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Подвал -->
+<footer class="footer-custom">
+    <div class="container">
+        <div class="content has-text-centered">
+            <p class="is-size-5 mb-3">
+                <i class="fas fa-heartbeat"></i>&nbsp;
+                <strong>HealthLog</strong> — ваш персональный дневник здоровья
+            </p>
+            <p class="mb-4">
+                Следите за самочувствием, находите закономерности, живите осознанно.
+            </p>
+            <p>
+                <a class="has-text-light" href="index1.html">Главная</a> |
+                <a class="has-text-light" href="faq.html">FAQ</a> |
+                <a class="has-text-light" href="contacts.html">Контакты</a>
+            </p>
+            <p class="mt-3">
+                © 2025 HealthLog. Все права защищены.
+                <a class="has-text-light" href="#">Политика конфиденциальности</a> |
+                <a class="has-text-light" href="#">Условия использования</a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<!-- Скрипты -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+        $navbarBurgers.forEach( el => {
+            el.addEventListener('click', () => {
+                const target = el.dataset.target;
+                const $target = document.getElementById(target);
+                el.classList.toggle('is-active');
+                $target.classList.toggle('is-active');
+            });
+        });
+    });
+
+    function handleSubmit(event) {
+        event.preventDefault();
+        document.getElementById('successMessage').style.display = 'block';
+        document.getElementById('feedbackForm').reset();
+        document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth' });
+        return false;
+    }
+</script>
+
+</body>
+</html>
