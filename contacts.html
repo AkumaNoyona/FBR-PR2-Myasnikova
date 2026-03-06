@@ -15,45 +15,35 @@
             --text-light: #FFFFFF;
             --title-color: #4A4A4A;
         }
-
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: var(--background);
             color: var(--text-dark);
         }
-
         .navbar {
             background-color: var(--primary) !important;
         }
-
-        .navbar-item,
-        .navbar-link {
+        .navbar-item, .navbar-link {
             color: var(--text-light) !important;
         }
-
-        .navbar-item:hover,
-        .navbar-link:hover {
+        .navbar-item:hover, .navbar-link:hover {
             background-color: rgba(255, 255, 255, 0.1) !important;
         }
-
         .hero-block {
             background: linear-gradient(135deg, var(--primary) 0%, #9b87f5 100%);
             color: var(--text-light);
             text-align: center;
             padding: 5rem 1rem;
         }
-
         .section-block {
             padding: 4rem 1.5rem;
             background-color: var(--background);
         }
-
         .footer-custom {
             background-color: var(--primary);
             color: var(--text-light);
             padding: 2rem 1.5rem;
         }
-
         .contact-map {
             background: linear-gradient(135deg, var(--primary) 20%, var(--accent) 100%);
             height: 200px;
@@ -64,34 +54,12 @@
             color: var(--text-light);
             font-weight: bold;
         }
-
-        /* ВСЕ тексты на светлом фоне - тёмные */
-        .section-block,
-        .section-block p,
-        .section-block .content,
-        .section-block .title,
-        .section-block .subtitle,
-        .section-block .label,
-        .section-block .box,
-        .section-block .media-content p {
-            color: var(--text-dark) !important;
+        /* Для сообщений об ошибках */
+        .help.is-danger {
+            color: #f14668;
         }
-
-        .title-primary {
-            color: var(--title-color) !important;
-        }
-
-        /* Исправляем цвета в box с контактами */
-        .contact-info-box {
-            background-color: #f5f5ff;
-            padding: 2rem;
-            border-radius: 12px;
-        }
-
-        .contact-info-box .title,
-        .contact-info-box .subtitle,
-        .contact-info-box p {
-            color: var(--text-dark) !important;
+        .input.is-danger, .textarea.is-danger {
+            border-color: #f14668;
         }
     </style>
 </head>
@@ -105,14 +73,12 @@
                 <i class="fas fa-heartbeat"></i>&nbsp;
                 <strong>HealthLog</strong>
             </a>
-
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
                 <span aria-hidden="true"></span>
             </a>
         </div>
-
         <div id="navbarMenu" class="navbar-menu">
             <div class="navbar-end">
                 <a class="navbar-item" href="index.html">Главная</a>
@@ -152,25 +118,19 @@
             <div class="column is-5">
                 <div class="content">
                     <h2 class="title is-3 title-primary">Наши контакты</h2>
-
-                    <div class="contact-info-box">
+                    <div class="contact-info-box" style="background-color: #f5f5ff; padding: 2rem; border-radius: 12px;">
                         <div class="media mb-5">
                             <div class="media-left">
-                                <span class="icon is-large">
-                                    <i class="fas fa-map-marker-alt fa-2x" style="color: var(--primary);"></i>
-                                </span>
+                                <span class="icon is-large"><i class="fas fa-map-marker-alt fa-2x" style="color: var(--primary);"></i></span>
                             </div>
                             <div class="media-content">
                                 <p class="title is-5">Адрес</p>
                                 <p class="subtitle is-6">Москва, ул. Здоровая, д. 1, офис 101</p>
                             </div>
                         </div>
-
                         <div class="media mb-5">
                             <div class="media-left">
-                                <span class="icon is-large">
-                                    <i class="fas fa-phone-alt fa-2x" style="color: var(--primary);"></i>
-                                </span>
+                                <span class="icon is-large"><i class="fas fa-phone-alt fa-2x" style="color: var(--primary);"></i></span>
                             </div>
                             <div class="media-content">
                                 <p class="title is-5">Телефон</p>
@@ -178,12 +138,9 @@
                                 <p class="subtitle is-6">+7 (987) 654-32-10</p>
                             </div>
                         </div>
-
                         <div class="media mb-5">
                             <div class="media-left">
-                                <span class="icon is-large">
-                                    <i class="fas fa-envelope fa-2x" style="color: var(--primary);"></i>
-                                </span>
+                                <span class="icon is-large"><i class="fas fa-envelope fa-2x" style="color: var(--primary);"></i></span>
                             </div>
                             <div class="media-content">
                                 <p class="title is-5">Email</p>
@@ -191,12 +148,9 @@
                                 <p class="subtitle is-6">support@healthlog.com</p>
                             </div>
                         </div>
-
                         <div class="media">
                             <div class="media-left">
-                                <span class="icon is-large">
-                                    <i class="fas fa-clock fa-2x" style="color: var(--primary);"></i>
-                                </span>
+                                <span class="icon is-large"><i class="fas fa-clock fa-2x" style="color: var(--primary);"></i></span>
                             </div>
                             <div class="media-content">
                                 <p class="title is-5">Часы работы</p>
@@ -205,7 +159,6 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="buttons mt-5">
                         <a class="button is-medium" href="#" style="background-color: #0088cc; color: white;">
                             <span class="icon"><i class="fab fa-telegram"></i></span>
@@ -224,35 +177,43 @@
                 <div class="box" style="padding: 2rem;">
                     <h2 class="title is-3 title-primary mb-5">Напишите нам</h2>
 
-                    <form id="feedbackForm" onsubmit="return handleSubmit(event)">
-                        <!-- Имя -->
+                    <form id="feedbackForm" novalidate>
+                        <!-- ФИО -->
                         <div class="field">
-                            <label class="label" style="color: var(--text-dark);">Ваше имя</label>
+                            <label class="label">ФИО <span class="has-text-danger">*</span></label>
                             <div class="control has-icons-left">
-                                <input class="input" type="text" placeholder="Иван Иванов" required>
-                                <span class="icon is-small is-left">
-                                    <i class="fas fa-user"></i>
-                                </span>
+                                <input class="input" type="text" id="fullname" placeholder="Иванов Иван Иванович" required>
+                                <span class="icon is-small is-left"><i class="fas fa-user"></i></span>
                             </div>
+                            <p class="help" id="fullnameHelp">Введите фамилию, имя и отчество</p>
+                        </div>
+
+                        <!-- Телефон -->
+                        <div class="field">
+                            <label class="label">Телефон <span class="has-text-danger">*</span></label>
+                            <div class="control has-icons-left">
+                                <input class="input" type="tel" id="phone" placeholder="+7 (999) 123-45-67" required>
+                                <span class="icon is-small is-left"><i class="fas fa-phone"></i></span>
+                            </div>
+                            <p class="help" id="phoneHelp">Введите 10 цифр номера</p>
                         </div>
 
                         <!-- Email -->
                         <div class="field">
-                            <label class="label" style="color: var(--text-dark);">Email</label>
+                            <label class="label">Email <span class="has-text-danger">*</span></label>
                             <div class="control has-icons-left">
-                                <input class="input" type="email" placeholder="ivan@example.com" required>
-                                <span class="icon is-small is-left">
-                                    <i class="fas fa-envelope"></i>
-                                </span>
+                                <input class="input" type="email" id="email" placeholder="example@mail.ru" required>
+                                <span class="icon is-small is-left"><i class="fas fa-envelope"></i></span>
                             </div>
+                            <p class="help" id="emailHelp">Введите корректный email адрес</p>
                         </div>
 
                         <!-- Тема (выпадающий список) -->
                         <div class="field">
-                            <label class="label" style="color: var(--text-dark);">Тема обращения</label>
+                            <label class="label">Тема обращения</label>
                             <div class="control">
                                 <div class="select is-fullwidth">
-                                    <select required>
+                                    <select id="topic">
                                         <option value="" disabled selected>Выберите тему</option>
                                         <option>Вопрос о продукте</option>
                                         <option>Предложение по улучшению</option>
@@ -266,34 +227,40 @@
 
                         <!-- Сообщение -->
                         <div class="field">
-                            <label class="label" style="color: var(--text-dark);">Сообщение</label>
+                            <label class="label">Сообщение</label>
                             <div class="control">
-                                <textarea class="textarea" placeholder="Ваше сообщение..." rows="5" required></textarea>
+                                <textarea class="textarea" id="message" placeholder="Ваше сообщение..." rows="4"></textarea>
                             </div>
+                            <p class="help" id="messageHelp">До 500 символов (необязательно)</p>
                         </div>
 
-                        <!-- Чекбокс согласия -->
+                        <!-- Согласие -->
                         <div class="field">
                             <div class="control">
-                                <label class="checkbox" style="color: var(--text-dark);">
-                                    <input type="checkbox" required>
-                                    Я соглашаюсь на <a href="#" style="color: var(--primary);">обработку персональных данных</a>
+                                <label class="checkbox">
+                                    <input type="checkbox" id="agreement" required>
+                                    Я соглашаюсь на <a href="#">обработку персональных данных</a> <span class="has-text-danger">*</span>
                                 </label>
                             </div>
                         </div>
 
-                        <!-- Кнопка отправки -->
-                        <div class="field">
+                        <!-- Кнопки -->
+                        <div class="field is-grouped is-grouped-centered">
                             <div class="control">
-                                <button class="button is-primary" type="submit" style="background-color: var(--primary); color: white;">
+                                <button type="submit" class="button is-primary" style="background-color: var(--primary);">
                                     <span class="icon"><i class="fas fa-paper-plane"></i></span>
-                                    <span>Отправить сообщение</span>
+                                    <span>Отправить</span>
+                                </button>
+                            </div>
+                            <div class="control">
+                                <button type="reset" class="button is-light">
+                                    <span>Очистить</span>
                                 </button>
                             </div>
                         </div>
                     </form>
 
-                    <!-- Уведомление об успешной отправке -->
+                    <!-- Уведомление об успехе (оставим, но теперь будет срабатывать после валидации) -->
                     <div id="successMessage" class="notification is-success mt-5" style="display: none;">
                         <button class="delete" onclick="this.parentElement.style.display='none'"></button>
                         <strong>Спасибо!</strong> Ваше сообщение отправлено. Мы ответим вам в ближайшее время.
@@ -341,7 +308,11 @@
     </div>
 </footer>
 
-<!-- Скрипты -->
+<!-- Подключаем скрипты валидации и логирования -->
+<script src="validation.js"></script>
+<script src="consoleLogger.js"></script>
+
+<!-- Скрипт для мобильного меню (можно оставить здесь или вынести) -->
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
@@ -354,14 +325,6 @@
             });
         });
     });
-
-    function handleSubmit(event) {
-        event.preventDefault();
-        document.getElementById('successMessage').style.display = 'block';
-        document.getElementById('feedbackForm').reset();
-        document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth' });
-        return false;
-    }
 </script>
 
 </body>
